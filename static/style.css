@@ -1,0 +1,81 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中对齐内容 */
+    justify-content: center; /* 垂直居中对齐内容 */
+    height: 100vh; /* 使用视口高度来垂直居中内容 */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* 添加标题下方的间距 */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* 添加阴影效果 */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    /* 添加圆角 */
+    border-radius: 4px;
+    /* 添加按钮下方的间距 */
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.sudoku-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中对齐数独容器 */
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; /* 移除表格之间的间隙 */
+}
+
+.sudoku-table {
+    border-collapse: collapse; /* 合并表格边框 */
+    width: 100%; /* 设置数独表格的宽度 */
+    max-width: 100px; /* 设置数独表格的最大宽度 */
+    border: 2px solid #333;   /* 设置数独表格的边框 */
+}
+
+.sudoku-table td {
+    width: 30px; /* 设置单元格的宽度 */
+    height: 30px; /* 设置单元格的高度 */
+    text-align: center; /* 设置单元格中的文本居中对齐 */
+    font-size: 20px; /* 设置单元格中的文本大小 */
+    border-right: 1px solid #ccc; /* 设置单元格的右边框 */
+    border-bottom: 1px solid #ccc; /* 设置单元格的下边框 */
+}
+
+.sudoku-table tr:last-child td:last-child {
+    border-right: 1px solid #ccc; /* 保留其他右边框 */
+    border-bottom: 1px solid #ccc; /* 保留其他下边框 */
+    border-top: none; /* 移除上边框 */
+    border-left: none; /* 移除左边框 */
+}
+
+.sudoku-table td:last-child {
+    border-right: none;
+}
+
+.sudoku-table tr:last-child td {
+    border-bottom: none;
+}
+
+.sudoku-table .thick-grid {
+    border: 2px solid #333;
+}
